@@ -8,7 +8,6 @@ import HomeScreen from "../screens/Home";
 
 const Tab = createBottomTabNavigator();
 
-// Bottom Tab Setup
 const TabNavigator = () => {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === "dark";
@@ -16,13 +15,10 @@ const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        headerShown: false,
+        headerTitleStyle: { fontSize: 22, fontWeight: "800" },
         tabBarActiveTintColor: "#2563eb",
         tabBarStyle: {
-          backgroundColor: isDark ? "#111827" : "#ffffff",
-          borderTopWidth: 0,
-          height: 65,
-          paddingBottom: 8,
+          height: 100,
         },
       }}
     >
@@ -30,7 +26,11 @@ const TabNavigator = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          title: "Home",
+          title: "Traky",
+          headerTitleStyle: {
+            fontSize: 28,
+            fontWeight: "800",
+          },
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" color={color} size={size} />
           ),

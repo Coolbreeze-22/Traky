@@ -24,16 +24,8 @@ export default function AppNavigator() {
         <Stack.Screen
           name="MainTabs"
           component={TabNavigator}
-          // options={{ headerShown: false }}
           options={{
-            // headerShown: false,
-            title: "Smart tracking simplified",
-            // headerTitleAlign: "center",
-            headerTitleStyle: {
-              fontSize: 16,
-              // fontWeight: "400",
-              color: "#2563eb",
-            },
+            headerShown: false,
           }}
         />
         <Stack.Screen
@@ -41,7 +33,10 @@ export default function AppNavigator() {
           component={ModalScreen}
           options={{
             presentation: "modal",
-            title: "Modal Info",
+            title: "Smart tracking",
+            headerTitleStyle: {
+              fontSize: 17,
+            },
           }}
         />
       </Stack.Navigator>
